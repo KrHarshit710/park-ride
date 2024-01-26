@@ -4,6 +4,10 @@ pipeline {
         maven 'maven_3_9_6'
     }
     stages {
+        stage('Initialize') {
+            def dockerHome = tool 'docker'
+            env.PATH = "${docker}/bin:${env.PATH}"
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
