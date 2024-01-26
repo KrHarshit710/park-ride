@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                sh 'docker build . -t krHarshit/park-ride'
+                sh 'docker build . -t krharshit/park-ride'
             }
         }
     }
