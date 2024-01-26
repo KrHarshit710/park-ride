@@ -14,5 +14,10 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('Build Docker image') {
+            steps {
+                sh 'docker build . -t krHarshit/park-ride'
+            }
+        }
     }
 }
