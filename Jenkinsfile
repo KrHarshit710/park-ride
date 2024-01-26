@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                sh 'sudo docker build . -t krharshit/park-ride'
+                sh 'docker build --user='root' . -t krharshit/park-ride'
             }
         }
     }
