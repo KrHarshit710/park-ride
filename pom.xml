@@ -57,6 +57,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>park-service</finalName>
     </build>
 
 </project>
